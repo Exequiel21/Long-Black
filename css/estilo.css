@@ -1,0 +1,258 @@
+.contenedor-img {
+  display: flex;
+  align-content: center;
+  justify-content: center; }
+
+.footer_flex {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  text-transform: uppercase; }
+
+.grid_cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.container .card {
+  width: 600px;
+  height: 450px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  margin: 100px;
+  text-align: center;
+  transition: all 0.25s; }
+
+.container .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12 16px rgba(0, 0, 0, 0.2); }
+
+.container .card img {
+  width: 600px;
+  height: 400px; }
+
+.container .card h2 {
+  font-weight: 500; }
+
+.container .card p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300; }
+
+.principal__contacto {
+  margin-left: 30px;
+  margin-top: 50px; }
+
+.principal__productos {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  margin-top: 40px; }
+
+.main {
+  margin-left: 40px;
+  margin-right: 40px;
+  text-justify: auto; }
+
+.footer {
+  margin-bottom: 20px; }
+
+.table__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 40px; }
+
+.table {
+  background-color: white;
+  text-align: left;
+  width: 70%;
+  border-collapse: collapse; }
+
+th, td {
+  border: solid 1px black;
+  padding: 20px; }
+
+thead {
+  border: solid 2px; }
+
+tr:nth-child(even) {
+  background-color: #ddd; }
+
+body {
+  font-family: 'Spartan', sans-serif; }
+
+.variedades {
+  width: 1000px; }
+
+.espresso {
+  width: 1000px; }
+
+.americano {
+  width: 1000px; }
+
+.latte {
+  width: 1000px; }
+
+.longB {
+  width: 1000px; }
+
+.capu {
+  width: 1000px; }
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px; }
+
+.formulario__label {
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 20px; }
+
+.formulario__grupo-input {
+  position: relative; }
+
+.formulario__input {
+  width: 50%;
+  background: white;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: .3s ease all;
+  margin-left: 20px; }
+
+.formulario__input:focus {
+  border: 3px solid #0075FF;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4); }
+
+.formulario__input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+  margin-left: 20px; }
+
+.formulario__input-error-activo {
+  display: block;
+  margin-left: 20px; }
+
+.formulario__grupo-terminos,
+.formulario__mensaje
+.formulario__grupo-btn-enviar {
+  grid-column: span 2; }
+
+.formulario__mensaje {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: #f30000;
+  padding-top: 20px; }
+
+.formulario__mensaje-activo {
+  display: block; }
+
+.formulario__mensaje p {
+  margin: 0; }
+
+.formulario__grupo-btn-enviar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.formulario__btn {
+  height: 45px;
+  line-height: 45px;
+  width: 20%;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .1s ease all; }
+
+.formulario__btn:hover {
+  box-shadow: 3px 0 30px #a3a3a3; }
+
+.formulario__mensaje-exito {
+  font-size: 14px;
+  color: #0b4e02; }
+
+.formulario__grupo {
+  margin-left: 25px; }
+
+.formulario__checkbox {
+  margin-left: 35px; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none; }
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px); }
+
+.hero h1 {
+  font-size: 80px; }
+
+.hero p {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #113CFC; }
+
+nav {
+  background: #fff;
+  height: 80px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  overflow: hidden; }
+
+nav a {
+  flex: 1;
+  height: 100%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+  transition: .2s ease-in-out all;
+  font-weight: 500; }
+
+nav a:hover {
+  background: #f0f0f0; }
+
+nav .indicador {
+  width: 0px;
+  height: 7px;
+  background: #113cfc;
+  position: absolute;
+  bottom: 0;
+  transition: .3s ease-out all;
+  /* transform: translate(-500px); */ }

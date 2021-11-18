@@ -1,0 +1,97 @@
+.contenedor-img {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.footer_flex {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+
+}
+.grid_cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    width: 600px;
+    height: 450px;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.2);
+    margin: 100px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12 16px rgba(0,0,0,0.2);
+}
+.container .card img {
+    width: 600px;
+    height: 400px;
+}
+
+.container .card h2 {
+    font-weight: 500;
+}
+
+.container .card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.principal__contacto {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.principal__productos {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-top: 40px;
+}
+.main {
+    margin-left: 40px;
+    margin-right: 40px;
+    text-justify: auto;
+}
+.footer {
+    margin-bottom: 20px;
+}
+.table__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.table {
+    background-color:rgba($color: #fff, $alpha: 1.0);
+    text-align: left;
+    width: 70%;
+    border-collapse: collapse;
+}
+th, td {
+    border: solid 1px black;
+    padding: 20px;
+}
+thead {
+    border: solid 2px ;
+}
+tr:nth-child(even) {
+    background-color: #ddd;
+}
