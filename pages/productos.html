@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
     <link rel="stylesheet" href="/css/estilo.css">
     <title>Productos</title>
 </head>
@@ -30,7 +31,7 @@
         
     <div class="grid_cont">
 
-        
+            <div data-aos="fade-right">
             <div class="container">
             <div class="card">
             <img src="/assets/img/cafeteras/prensa.jpg" alt="prensa francesa">
@@ -38,15 +39,16 @@
             <p>Una de las mas conocidas, gracias a su capacidad de hacer cafés más aceticos, texturizar la leche con su embolo y poder hacer coldbrew dentro de ella.</p>
             </div>
             </div>
+            </div>
 
-            <div class="container">
+            <div class="container" data-aos="fade-down">
             <div class="card">
             <img src="/assets/img/cafeteras/moka.jpg" alt="moka">
             <h3>Moka Italiana</h3>
             <p>Una de las más emblematicas de la historia. La Moka es bien conocida en todos los hogares de nuestros abuelos, al estar hecha de aluminio refozado, nos entrega un café con gran cuerpo e intensidad.</p>
         </div>
 
-            <div class="container">
+            <div class="container" data-aos="zoom-out-up">
             <div class="card">
             <img src="/assets/img/cafeteras/v60.jpg" alt="v60">
             <h3>Cafetera V60</h3>
@@ -54,7 +56,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" data-aos="flip-up">
             <div class="card">
             <img src="/assets/img/cafeteras/chemex.jpg" alt="chemex">
             <h3>Chemex</h3>
@@ -62,7 +64,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" data-aos="flip-down">
             <div class="card">
             <img src="/assets/img/cafeteras/syphon.jpg" alt="syphon">
             <h3>Syphon</h3>
@@ -70,7 +72,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" data-aos="zoom-in-up">
             <div class="card">
             <img src="/assets/img/cafeteras/aeropress.jpg" alt="aeropress">
             <h3>Aeropress</h3>
@@ -79,6 +81,18 @@
         </div>
 
     </div>
+    <footer class="footer" id="footer">
+        <h2>REDES SOCIALES</h2>
+        <div class="footer_flex">
+            <a href="https://www.instagram.com/?hl=es">Instagram</a>
+            <a href="https://es-la.facebook.com/">Facebook</a>
+            <a href="https://twitter.com/?lang=es">Twitter</a>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="/js/productos.js"></script>
 </body>
 </html>
