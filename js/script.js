@@ -43,3 +43,35 @@ const onResize = () => {
 }
 
 window.addEventListener('resize', onResize);
+
+
+//DARK MODE
+
+
+const bdark = document.querySelector("#btn__darkmode");
+const body = document.querySelector("body");
+
+load();
+
+btn__darkmode.addEventListener("click", e => {
+	body.classList.toggle("darkmode");
+	store(body.classList.contains("darkmode"));
+});
+
+
+function load(){
+	const darkM = localStorage.getItem("darkmode");
+
+	if(!darkM){
+		store("false");
+	}else if(darkM == "true") {
+		body.classList.add("darkmode");
+	}
+};
+
+
+function store(value){
+	localStorage.setItem("darkmode", value);
+};
+
+

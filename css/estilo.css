@@ -1,3 +1,6 @@
+.btn__dark--container {
+  margin-top: 50px; }
+
 .contenedor-img {
   display: flex;
   align-content: center;
@@ -10,7 +13,10 @@
   justify-content: space-around;
   text-transform: uppercase; }
 
-.grid_cont {
+.footer h2 {
+  margin-left: 30px; }
+
+.flex_cont {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
@@ -88,8 +94,31 @@ thead {
 tr:nth-child(even) {
   background-color: #ddd; }
 
+.darkmode table {
+  background-color: #020202; }
+
+.darkmode tr:nth-child(even) {
+  background-color: #1a1919; }
+
 body {
   font-family: 'Spartan', sans-serif; }
+
+.darkmode {
+  background-color: #20202c;
+  color: whitesmoke; }
+
+.btn__dark--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: sticky; }
+
+.darkmode footer a {
+  color: white; }
+
+.footer_flex a {
+  color: black; }
 
 .variedades {
   width: 1000px; }
@@ -108,6 +137,24 @@ body {
 
 .capu {
   width: 1000px; }
+
+.moon {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s; }
+
+.moon:hover {
+  background-color: rgba(0, 0, 0, 0.856);
+  width: 50px;
+  height: auto; }
+
+.darkmode .moon {
+  background-color: black; }
+
+.darkmode .moon:hover {
+  background-color: white; }
 
 .formulario {
   display: grid;
@@ -204,7 +251,8 @@ html, body {
 
 body {
   width: 100%;
-  height: auto; }
+  height: auto;
+  transition: all 0.4s; }
 
 a {
   text-decoration: none; }
