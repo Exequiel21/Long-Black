@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <title>COMPRAS</title>
+</head>
+<body>
+
+
+    <!--CARRITO DE COMPRAS 
+    <header class="header-cart">
+        <div class="header-section contenedor">
+            <div>
+                <img  class="cart" src="/assets/icons/carrito-de-compras.png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            <div class="" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">X</p>
+                <h3>Mi carrito</h3>
+                <div class="card-items">
+                    <!-- <div class="item">
+                        <img src="image-product item-image" alt="">
+                        <div class="item-content">
+                            <h5></h5>
+                            <h5 class="cart-price"></h5>
+                            <h6></h6>
+                        </div>
+                        <span>X</span>
+                    </div>
+    
+                    <div class="item">
+                        <img class=" "src="" alt="">
+                        <div class="item-content">
+                            <h5></h5>
+                            <h5 class="cart-price"></h5>
+                        </div>
+                        <span class="delete-product" data-id="">X</span>
+                    </div> 
+                </div>
+                <h2>Total:$ <strong class="price-total">0</strong></h2>
+            </div>
+        </div>
+    </header>
+-->
+
+
+    <!--logo e iso--> 
+    <div class="hero" id="hero">
+        <h1>Long-Black</h1>
+        <p>Blog y Tienda de Café</p>
+    </div>
+
+    <nav id="menu">
+        <a href="/index.html">Home</a>
+        <a href="cafe.html">Manual del Café</a>
+        <a href="productos.html">Cafeteras</a>
+        <a href="contacto.html">Contacto</a>
+        <span class="indicador" id="indicador"></span>
+    </nav>
+    <br />
+    <!--dark mode-->
+    <div class="btn__dark--container">
+        <img src="/assets/icons/moon.png" alt="dark" id="btn__darkmode" class="moon" />
+    </div>
+
+
+    <!--PRODUCTOS-->
+        <!--CONTENEDOR-->
+        <h2>PRODUCTOS</h2>
+        <hr>
+    <section class="container-c">
+            
+            <div class="products">   
+
+            <!--producto id 1-->
+                <div class="item carts">
+                <img class="image-product item-image" src="/assets/productos/africa.jpg" >
+                        <h2 class="item-title">Combo Africa</h2>
+                        <h3 class="item-price">Precio:<span>$4800</span></h3>
+                        <button class="item-buttom btn__addCart ">Añadir al carro</button>
+                </div>
+                <!--producto id 2-->
+                <div class="item carts">
+                    <img class="image-product item-image" src="/assets/productos/brasil.jpg"  >
+                        <h2 class="item-title">Brasileño</h2>
+                        <h3 class="item-price">Precio:<span>$2150</span></h3>
+                        <button class="item-buttom btn__addCart ">Añadir al carro</button>
+                </div>
+                <!--producto id 3-->  
+                <div class="item carts">
+                    <img  class="image-product item-image" src="/assets/productos/costa--rica.jpg" >
+                        <h2 class="item-title">Costa Rica</h2>
+                        <h3 class="item-price">Precio:<span>$2100</span></h3>
+                        <button class="item-buttom btn__addCart ">Añadir al carro</button>
+                </div>
+                <!--producto id 4-->
+                <div class="item carts">
+                    <img class="image-product item-image" src="/assets/productos/colombia.jpg" >
+                        <h2 class="item-title">Colombiano</h2>
+                        <h3 class="item-price">Precio:<span>$2500</span></h3>
+                        <button class="item-buttom btn__addCart ">Añadir al carro</button>
+                </div>
+                <!--producto id 5-->
+                <div class="item carts">
+                    <img class="image-product item-image" src="/assets/productos/ecuador.jpg" >
+                        <h2 class="item-title">Ecuatoriano</h2>
+                        <h3 class="item-price">Precio:<span>$2250</span></h3>
+                        <button class="item-buttom btn__addCart ">Añadir al carro</button>
+                </div>
+            </div>
+    </section>
+    <div>
+
+
+        
+    <!--Visualización del carrito--> 
+    <div class="carrito"> 
+        <h1>CARRITO</h1>
+        
+    </div>
+<hr>
+    <div class="grid">
+        <div class="shopping__cart--header">
+            <h3>Producto</h3>
+        </div>
+        <div class="shopping__cart--header">
+            <h3>Precio</h3>
+        </div>
+        <div class="shopping__cart--header">
+            <h3>Cantidad</h3>
+        </div>
+    </div>
+
+    <!--EJEMPLO (BORRAR)-->
+    <div class=" cart-products">
+    <!-- <div class="grid-2">
+        <div class="grid-flex cart-products shoppingCartItem">
+            <div class="contenedor-flex-1">
+                <img class="image-product" src="/assets/productos/costa--rica.jpg" alt="">
+                <h5>Costa Rica</h5>
+            </div>
+            <div class="contenedor-flex-2">
+                <h5>$2100</h5>
+            </div>
+            <div class="contenedor-flex-3">
+                <input class="input" type="quantity" name="cantidad" id="1" value="1">
+                <button class="delete">X</button>
+            </div>
+        </div>
+    </div>-->
+    </div>
+
+    <br>
+    <br>
+    <div class="total-comprar">
+        <div>
+            <h4 class="shoppingCartTotal">Total: $</h4>
+        </div>
+        <div>
+            <button class="comprar">Comprar</button>
+        </div>
+    </div>
+
+    <br>
+    <footer class="footer" id="footer">
+    <h2>REDES SOCIALES</h2>
+    <div class="footer_flex">
+        <a href="https://www.instagram.com/?hl=es">Instagram</a>
+        <a href="https://es-la.facebook.com/">Facebook</a>
+        <a href="https://twitter.com/?lang=es">Twitter</a>
+    </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="/js/compras.js"></script>
+</body>
+</html>

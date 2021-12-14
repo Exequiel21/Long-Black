@@ -43,3 +43,147 @@ const onResize = () => {
 }
 
 window.addEventListener('resize', onResize);
+
+//DARK MODE
+
+
+const bdark = document.querySelector("#btn__darkmode");
+const body = document.querySelector("body");
+
+load();
+
+btn__darkmode.addEventListener("click", e => {
+	body.classList.toggle("darkmode");
+	store(body.classList.contains("darkmode"));
+});
+
+
+function load(){
+	const darkM = localStorage.getItem("darkmode");
+
+	if(!darkM){
+		store("false");
+	}else if(darkM == "true") {
+		body.classList.add("darkmode");
+	}
+};
+
+
+function store(value){
+	localStorage.setItem("darkmode", value);
+};
+
+
+
+
+//CARITO DE COMPRAS
+
+//VARIABLES
+let contenedoresCarrito = document.querySelector(".productos");
+let containerBuyCart = document.querySelector(".card-items");
+let priceTotal = document.querySelector('.total-price');
+let amountProduct = document.querySelector('.count-product')
+
+let  buyThings = [];
+let totalCard = 0; 
+let countProduct = 0;
+
+
+//FUNCIONES
+loadEventListeners();
+function loadEventListeners(){
+    contenedoresCarrito.addEventListener('click', addProduct);
+
+    containerBuyCart.addEventListener('click', deleteProduct)
+}
+
+//AGREGAR PRODUCTOS
+function addProduct(e){
+    e.preventDefault();
+    if (e.target.classList.contains('btn__carrito')){
+        const selectProduct = e.target.parentElement;
+        readTheContent(selectProduct);   
+    }   
+}
+
+//BORRAR PRODUCTOS
+function deleteProduct(e) {
+    if (e.target.classList.contains('delete-product')){
+        const deleteId = e.target.getAttribute('data-id');
+
+        buyThings.forEach(value => {
+            if (value.id == deleteId) {
+                let priceReduce = parseInt(value.price) * parseInt(value.amount);
+                totalCard = totalCard - priceReduce;
+            } 
+        })
+
+        buyThings = buyThings.filter(product => product.id !== deleteId);
+
+        countProduct--;
+        }
+        loadHtml();
+}
+
+//INFO PRODUCTOS
+function readTheContent(product) {
+    const infoProduct = {
+        title : product.querySelector('.title').textContent,
+        price : product.querySelector('.price').textContent,
+        id : product.querySelector('button').getAttribute('data-id'),
+        amount : 1
+    }
+
+//SUMAMOS TOTAL DE PRODUCTOS
+totalCard =   parseInt(totalCard) + parseInt(infoProduct.price);   
+
+
+
+// SI EXTISTE, ENTONCES NO LO REPITAS, SINO QUE LO SUMES     
+    const exist = buyThings.some(product => product.id === infoProduct.id);
+    if (exist) {
+        const pro = buyThings.map(product => {
+            if (product.id === infoProduct.id) {
+                product.amount++;
+                return product;
+            } else {
+                return product
+            }
+        });
+        buyThings = [...pro];
+    } else {
+        buyThings = [...buyThings, infoProduct]
+        countProduct++;
+    }
+    loadHtml();
+    //console.log(infoProduct);
+}
+    
+
+function loadHtml(){
+    clearHtml();
+    buyThings.forEach(product => {
+        const {title,price,id,amount} = product;
+        const row = document.createElement('div');
+        row.classList.add('item');
+        row.innerHTML = `
+        <div class="item-content">
+            <h5>${title}</h5>
+            <h5 class="cart-price"> ${price}</h5>
+            <h6>Cantidad: ${amount}</h6>
+        </div>
+        <span class="delete-product" data-id="${id}">X</span>
+        `;
+
+        containerBuyCart.appendChild(row);
+
+        priceTotal.innerHTML = totalCard;
+        
+        amountProduct.innerHTML = countProduct;
+    })
+}
+
+function clearHtml(){
+    containerBuyCart.innerHTML = '';
+}
+
